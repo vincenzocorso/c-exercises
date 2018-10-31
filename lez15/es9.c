@@ -15,13 +15,16 @@ int main()
 
 	/* Stampa le terne pitagoriche tali che a, b, c sono minori di n.
 	   Impostando b = a nel secondo for, evitiamo di stampare delle terne doppioni.
-	   Aumentiamo a e b di 1 finché questi sono minori di radice di n (sfruttiamo
-	   il crivello di Eratostene per aumentare l'efficienza ed effettuare meno calcoli)
 	*/
-	for(unsigned int a = 1; a <= sqrt(n); a++)
-		for(unsigned int b = a; b <= sqrt(n); b++)
-			if(a * a + b * b < n)
-				printf("a=%u, b=%u, c=%u\n", a, b, a * a + b * b);
+	for(unsigned int a = 1; a < n; a++)
+	{
+		for(unsigned int b = a; b < n; b++)
+		{
+			int c = (int)sqrt(a * a + b * b);
+			if(c < n && c * c == a * a + b * b)
+				printf("a=%u, b=%u, c=%d \n", a, b, c);
+		}
+	}
 
 	return 0;
 }
