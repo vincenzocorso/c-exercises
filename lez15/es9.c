@@ -16,13 +16,14 @@ int main()
 	/* Stampa le terne pitagoriche tali che a, b, c sono minori di n.
 	   Impostando b = a nel secondo for, evitiamo di stampare delle terne doppioni.
 	*/
+	unsigned int c;
 	for(unsigned int a = 1; a < n; a++)
 	{
 		for(unsigned int b = a; b < n; b++)
 		{
-			int c = (int)sqrt(a * a + b * b);
-			if(c < n && c * c == a * a + b * b)
-				printf("a=%u, b=%u, c=%d \n", a, b, c);
+			c = (int)sqrt(a * a + b * b);
+			if(c < n && c * c == a * a + b * b) // verifico che c sia una radice perfetta
+				printf("a=%u, b=%u, c=%u\n", a, b, c);
 		}
 	}
 
