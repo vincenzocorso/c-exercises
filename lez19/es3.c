@@ -30,7 +30,7 @@ int main()
 		else if (!input) // Se il numero è nullo
 			nulli++;
 
-		if(input % 2) // Se il numero è pari
+		if(input % 2) // Se il numero è dispari
 			dispari++;
 
 		/* Alla prima iterazione non viene eseguito il confronto
