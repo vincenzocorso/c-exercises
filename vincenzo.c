@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "vincenzo.h"
 
 #define XOR(A,B) (A & ~B) | (B & ~A)
 
