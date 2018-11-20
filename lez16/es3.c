@@ -13,11 +13,8 @@ int main()
 	scanf("%u", &n);
 
 	unsigned int d;
-	double limite;
 	for(unsigned int primo = 1; primo < n; primo++)
 	{
-		limite = sqrt(primo);
-
 		for(d = 2; (primo % d) != 0 && d < primo; d++);
 
 		if(primo == d)

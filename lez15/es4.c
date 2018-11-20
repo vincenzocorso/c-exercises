@@ -20,7 +20,7 @@ int main()
 	   i fattori di un numero n sono tutti minori di radice di n. */
 	for(unsigned int i = 1; i <= sqrt(n); i++)
 		if(!(n % i))
-			printf("(%d, %d)\n", i, n / i);
+			printf("(%u, %u)\n", i, n / i);
 
 	return 0;
 }

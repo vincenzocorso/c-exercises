@@ -9,7 +9,7 @@ int main()
 	// Prendo in input un numero intero positivo.
 	unsigned int n;
 	printf("Inserisci un numero intero positivo: ");
-	scanf("%d", &n);
+	scanf("%u", &n);
 
 	/* Calcolo il fattoriale di n.
 	   n! = n * (n-1) * (n-2) * ... * 1
@@ -21,7 +21,7 @@ int main()
 		fattoriale *= n;
 
 	// Stampo il risultato ottenuto.
-	printf("%ld\n", fattoriale);
+	printf("%lu\n", fattoriale);
 
 	return 0;
 }

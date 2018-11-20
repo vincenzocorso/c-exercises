@@ -12,31 +12,31 @@ int main()
 
 	// mcd_euclide() test
 	puts("\nmcd_euclide()");
-	printf("%d\n", mcd_euclide(1, 2));
-	printf("%d\n", mcd_euclide(5, 35));
-	printf("%d\n", mcd_euclide(35, 5));
-	printf("%d\n", mcd_euclide(54, 123));
+	printf("%u\n", mcd_euclide(1, 2));
+	printf("%u\n", mcd_euclide(5, 35));
+	printf("%u\n", mcd_euclide(35, 5));
+	printf("%u\n", mcd_euclide(54, 123));
 
 	// mcd_differenza() test
 	puts("\nmcd_differenza()");
-	printf("%d\n", mcd_differenza(1, 2));
-	printf("%d\n", mcd_differenza(5, 35));
-	printf("%d\n", mcd_differenza(35, 5));
-	printf("%d\n", mcd_differenza(54, 123));
+	printf("%u\n", mcd_differenza(1, 2));
+	printf("%u\n", mcd_differenza(5, 35));
+	printf("%u\n", mcd_differenza(35, 5));
+	printf("%u\n", mcd_differenza(54, 123));
 
 	// my_mcd() test
 	puts("\nmy_mcd()");
-	printf("%d\n", my_mcd(1, 2));
-	printf("%d\n", my_mcd(5, 35));
-	printf("%d\n", my_mcd(35, 5));
-	printf("%d\n", my_mcd(54, 123));
+	printf("%u\n", my_mcd(1, 2));
+	printf("%u\n", my_mcd(5, 35));
+	printf("%u\n", my_mcd(35, 5));
+	printf("%u\n", my_mcd(54, 123));
 
 	// my_mcm() test
 	puts("\nmy_mcm()");
-	printf("%d\n", my_mcm(1, 2));
-	printf("%d\n", my_mcm(5, 35));
-	printf("%d\n", my_mcm(35, 5));
-	printf("%d\n", my_mcm(54, 123));
+	printf("%u\n", my_mcm(1, 2));
+	printf("%u\n", my_mcm(5, 35));
+	printf("%u\n", my_mcm(35, 5));
+	printf("%u\n", my_mcm(54, 123));
 
 	// primo() test
 	puts("\nprimo()");

@@ -14,7 +14,7 @@ int main()
 
 	for(unsigned int i = 1; i <= n * n; i++)
 	{
-		printf("%4d ", i);
+		printf("%4u ", i);
 
 		if(!(i % n))
 			printf("\n");

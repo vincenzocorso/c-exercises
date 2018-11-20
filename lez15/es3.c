@@ -21,7 +21,7 @@ int main()
 	   si può usare lo shift --> n >= i << 1
 	*/
 	for(unsigned int i = 1; n >= i << 1; i++)
-		printf("(%d, %d)\n", i, n - i);
+		printf("(%u, %u)\n", i, n - i);
 
 	return 0;
 }

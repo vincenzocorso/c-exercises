@@ -20,7 +20,7 @@ int main()
 	int input, input_precedente;
 	unsigned int positivi = 0, nulli = 0, dispari = 0;
 	unsigned int crescente = 0, decrescente = 0;
-	printf("Inserisci una sequenza di %d interi: ", numeri);
+	printf("Inserisci una sequenza di %u interi: ", numeri);
 	for(unsigned int contatore = 1; contatore <= numeri; contatore++)
 	{
 		scanf("%d", &input);

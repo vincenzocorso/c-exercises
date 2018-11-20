@@ -13,7 +13,7 @@ int main()
 {
 	// Prende in input due numeri interi.
 	int b, i;
-	printf("Inserisci due numeri interi: ", &b, &i);
+	printf("Inserisci due numeri interi: ");
 	scanf("%d%d", &b, &i);
 	
 	/* Prende in input un carattere che corrisponde all'azione da eseguire sull'i-esimo bit.

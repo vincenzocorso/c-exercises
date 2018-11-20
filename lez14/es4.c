@@ -21,7 +21,7 @@ int main()
 	for(unsigned int riga = 1; riga <= n; riga++)
 	{
 		for(unsigned int colonna = 1; colonna <= riga; colonna++)
-			printf("%4d, ", entrata++);
+			printf("%4u, ", entrata++);
 		
 		printf("\n");
 	}
