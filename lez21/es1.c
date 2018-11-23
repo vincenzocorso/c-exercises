@@ -6,7 +6,7 @@
 */
 #include <stdio.h>
 
-unsigned int prendi_indice(const unsigned int dimensione, const int vettore[dimensione], const int valore);
+int prendi_indice(const unsigned int dimensione, const int vettore[dimensione], const int valore);
 
 int main()
 {
@@ -21,7 +21,7 @@ int main()
 	return 0;
 }
 
-unsigned int prendi_indice(const unsigned int dimensione, const int vettore[dimensione], const int valore)
+int prendi_indice(const unsigned int dimensione, const int vettore[dimensione], const int valore)
 {
 	unsigned int indice = -1;
 

@@ -5,17 +5,25 @@
 */
 #include <stdio.h>
 
+void sdoppia_carattere(const unsigned int dimensione, const char stringa[], char risultato[]);
+
 int main()
 {
-	char stringa1[50];
-	char stringa2[100];
-
-	fgets(stringa1, 100, stdin);
+	char stringa[5] = "ciao";
 	
-	for(unsigned int i = 0; i < 50; i += 1)
-		stringa2[2 * i] = stringa2[2 * i + 1] = stringa1[i];
+
+	char risultato[10];	
+	sdoppia_carattere(5, stringa, risultato);
 
 	printf("%s\n", stringa2);
+
+	return 0;
+}
+
+void sdoppia_carattere(const unsigned int dimensione, const char stringa[], char risultato[])
+{
+	for(unsigned int i = 0; i < dimensione * 2; i++)
+		risultato[2 * i] = risultato[2 * i + 1] = stringa[i]; // assegnazione rapida
 
 	return 0;
 }

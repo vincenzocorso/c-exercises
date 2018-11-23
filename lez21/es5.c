@@ -4,18 +4,22 @@
 */
 #include <stdio.h>
 
+void copia_stringa(const unsigned int dimensione, const char stringa[], char risultato[]);
+
 int main()
 {
-	char stringa1[100];
-	char stringa2[100];
+	char stringa[5] = "Ciao";
+	
+	char risultato[5];
+	copia_stringa(5, stringa, risultato);
 
-	printf("Inserisci una stringa: ");
-	fgets(stringa1, 100, stdin);
-
-	for(unsigned int i = 0; i < 100; i++)
-		stringa2[i] = stringa1[i];
-
-	printf("%s\n", stringa2);
+	printf("%s\n", risultato);
 
 	return 0;
+}
+
+void copia_stringa(const unsigned int dimensione, const char stringa[], char risultato[])
+{
+	for(unsigned int i = 0; i < dimensione; i++)
+		risultato[i] = stringa[i];
 }

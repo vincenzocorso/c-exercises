@@ -4,18 +4,23 @@
 */
 #include <stdio.h>
 
+void trasforma_in_maiuscolo(const int dimensione, const char stringa[], char risultato[]);
+
 int main()
 {
-	char stringa[100];
-	printf("Inserisci una stringa: ");
-	fgets(stringa, 100, stdin); // fgets può prendere in input stringhe contenenti spazi
+	char stringa[5] = "Ciao";
 
-	const char offset = 'a' - 'A';
-	for(char* ptr = stringa; *ptr != '\0'; ptr++)
-		if(*ptr >= 'a' && *ptr <= 'z')
-			*ptr -= offset;
+	char risultato[5];
+	trasforma_in_maiuscolo(5, stringa, risultato);
 
-	printf("%s\n", stringa);
+	printf("%s\n", risultato);
 
 	return 0;
+}
+
+void trasforma_in_maiuscolo(const int dimensione, const char stringa[], char risultato[])
+{
+	const char offset = 'a' - 'A';
+	for(unsigned int i = 0; i < dimensione; i++)
+		risultato[i] = (stringa[i] >= 'a' && stringa[i] <= 'z') ? stringa[i] - offset : stringa[i];
 }
