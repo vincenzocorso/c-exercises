@@ -20,7 +20,7 @@ int main()
 		printf("Inserisci un numero intero positivo minore di %u: ", strlen(s));
 		scanf("%d", &k);
 	}
-	while(k < 0 && k >= strlen(s));
+	while(k < 0 || k >= strlen(s));
 
 	move(s, t, k);
 	printf("%s\n", s);
