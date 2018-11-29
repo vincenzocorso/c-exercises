@@ -41,31 +41,21 @@ void aggiungi_carattere(char stringa[], const size_t posizione, const char carat
 	strcpy(ptr + 1, buffer);
 }
 
-int cerca_in_sottostringa(const char stringa[], const size_t start, const size_t end, const char carattere)
-{
-	size_t index = -1;
-
-	for(size_t i = start; i <= end && index == -1; i++)
-		if(stringa[i] == carattere)
-			index = i;
-
-	return index;
-}
-
 void rendi_palindroma(char stringa[])
 {
 	for(size_t i = 0; i < strlen(stringa) / 2; i++)
 	{
-		size_t lenght = strlen(stringa);
-
-		if(stringa[i] != stringa[lenght - i - 1])
+		char sx = stringa[i];
+		char dx = stringa[strlen(stringa) - i - 1];
+		if(sx != dx)
 		{
-			int found = cerca_in_sottostringa(stringa, i + 1, lenght - i - 2, stringa[i]);
-
-			if(found != -1)
-				aggiungi_carattere(stringa, i, stringa[lenght - i - 1]);
-			else
-				aggiungi_carattere(stringa, lenght - i, stringa[i]);
+			aggiungi_carattere(stringa, strlen(stringa) - i, sx);
+			
+			if(dx != stringa[i + 1])
+			{
+				aggiungi_carattere(stringa, i+1, dx);
+				i += 1;
+			}
 		}
 	}
 }
