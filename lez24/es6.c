@@ -7,8 +7,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void aggiungi_carattere(char stringa[], const size_t posizione, const char carattere);
-int cerca_in_sottostringa(const char stringa[], const size_t start, const size_t end, const char carattere);
+void aggiungi_carattere(char stringa[], const int posizione, const char carattere);
 void rendi_palindroma(char stringa[]);
 
 int main()
@@ -31,7 +30,7 @@ int main()
 	return 0;
 }
 
-void aggiungi_carattere(char stringa[], const size_t posizione, const char carattere)
+void aggiungi_carattere(char stringa[], const int posizione, const char carattere)
 {
 	char buffer[1000];
 	char* ptr = stringa + posizione;
