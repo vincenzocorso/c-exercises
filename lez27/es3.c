@@ -19,8 +19,8 @@ void inserisci_stringa(char ***stringhe, size_t *dimensione);
 char* max_stringa(char ** const stringhe, const size_t dimensione);
 char* min_stringa(char ** const stringhe, const size_t dimensione);
 void cancella_stringa(char ***stringhe, size_t *dimensione, size_t posizione);
-int ricerca_stringa(char ** const stringhe, size_t dimensione, const char *stringa);
-void ricerca_parola(char ** const stringhe, size_t dimensione, const char *stringa);
+int ricerca_stringa(char ** const stringhe, const size_t dimensione, const char *stringa);
+void ricerca_parola(char ** const stringhe, const size_t dimensione, const char *stringa);
 void stampa_stringhe(char ** const stringhe, const size_t dimensione);
 
 int main()
@@ -195,7 +195,7 @@ void cancella_stringa(char ***stringhe, size_t *dimensione, size_t posizione)
 	*dimensione = *dimensione - 1; 
 }
 
-int ricerca_stringa(char ** const stringhe, size_t dimensione, const char *stringa)
+int ricerca_stringa(char ** const stringhe, const size_t dimensione, const char *stringa)
 {
 	int flag = 0;
 
@@ -207,7 +207,7 @@ int ricerca_stringa(char ** const stringhe, size_t dimensione, const char *strin
 	return flag;
 }
 
-void ricerca_parola(char ** const stringhe, size_t dimensione, const char *stringa)
+void ricerca_parola(char ** const stringhe, const size_t dimensione, const char *stringa)
 {
 	/* Cerca all'intero delle stringhe la parola presa in input */
 	for(size_t i = 0; i < dimensione; i++)
