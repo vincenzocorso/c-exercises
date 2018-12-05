@@ -13,12 +13,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-void inizializzazione(char ***stringhe, size_t *dimensione);
-void menu(char ***stringhe, size_t *dimensione);
-void inserisci_stringa(char ***stringhe, size_t *dimensione);
+char** inizializzazione(char **stringhe, size_t *dimensione);
+char** menu(char **stringhe, size_t *dimensione);
+char** inserisci_stringa(char **stringhe, size_t *dimensione);
 char* max_stringa(char ** const stringhe, const size_t dimensione);
 char* min_stringa(char ** const stringhe, const size_t dimensione);
-void cancella_stringa(char ***stringhe, size_t *dimensione, size_t posizione);
+char** cancella_stringa(char **stringhe, size_t *dimensione, size_t posizione);
 int ricerca_stringa(char ** const stringhe, const size_t dimensione, const char *stringa);
 void ricerca_parola(char ** const stringhe, const size_t dimensione, const char *stringa);
 void stampa_stringhe(char ** const stringhe, const size_t dimensione);
@@ -29,10 +29,10 @@ int main()
 	char **stringhe = NULL;
 
 	/* Fase di inizializzazione */
-	inizializzazione(&stringhe, &N);
+	stringhe = inizializzazione(stringhe, &N);
 
 	/* Visualizza il menù */
-	menu(&stringhe, &N);
+	stringhe = menu(stringhe, &N);
 
 	/* Libera la memoria */
 	for(size_t i = 0; i < N; i++)
@@ -42,7 +42,7 @@ int main()
 	return 0;
 }
 
-void inizializzazione(char ***stringhe, size_t *dimensione)
+char** inizializzazione(char **stringhe, size_t *dimensione)
 {
 	/* Chiede all'utente il numero di stringhe che vuole inserire
 	   all'avvio del programma */
@@ -53,10 +53,12 @@ void inizializzazione(char ***stringhe, size_t *dimensione)
 
 	/* Prende in input delle stringhe e le inserisce nell'array */
 	for(unsigned int i = 0; i < numero; i++)
-		inserisci_stringa(stringhe, dimensione);
+		stringhe = inserisci_stringa(stringhe, dimensione);
+
+	return stringhe;
 }
 
-void menu(char ***stringhe, size_t *dimensione)
+char** menu(char **stringhe, size_t *dimensione)
 {
 	unsigned int scelta, input;
 	char stringa[100];
@@ -80,19 +82,19 @@ void menu(char ***stringhe, size_t *dimensione)
 		{
 			case 1: // Aggiungere un ulteriore stringa
 				puts("\n\n\n| INSERISCI NUOVA STRINGA |");
-				inserisci_stringa(stringhe, dimensione);
+				stringhe = inserisci_stringa(stringhe, dimensione);
 				break;
 
 			case 2: // Trovare la stringa di lunghezza maggiore
 				puts("\n\n\n| STRINGA DI LUNGHEZZA MAGGIORE |");
 				puts("La stringa di lunghezza maggiore è:");
-				printf("%s\n", max_stringa(*stringhe, *dimensione));
+				printf("%s\n", max_stringa(stringhe, *dimensione));
 				break;
 
 			case 3: // Trovare la stringa di lunghezza minore
 				puts("\n\n\n| STRINGA DI LUNGHEZZA MINORE |");
 				puts("La stringa di lunghezza minore è:");
-				printf("%s\n", min_stringa(*stringhe, *dimensione));
+				printf("%s\n", min_stringa(stringhe, *dimensione));
 				break;
 
 			case 4: // Cancellare una stringa
@@ -100,7 +102,7 @@ void menu(char ***stringhe, size_t *dimensione)
 				printf("Inserisci il numero della stringa che vuoi cancellare: ");
 				scanf("%u", &input);
 				if(input <= *dimensione - 1)
-					cancella_stringa(stringhe, dimensione, input);
+					stringhe = cancella_stringa(stringhe, dimensione, input);
 				break;
 
 			case 5: // Ricercare una stringa
@@ -108,7 +110,7 @@ void menu(char ***stringhe, size_t *dimensione)
 				puts("Digita la stringa che vuoi ricercare:");
 				printf("--> ");
 				scanf("%s", stringa);
-				printf("La stringa %s presente nell'array.\n", (ricerca_stringa(*stringhe, *dimensione, stringa) == 1) ? "è" : "non è");
+				printf("La stringa %s presente nell'array.\n", (ricerca_stringa(stringhe, *dimensione, stringa) == 1) ? "è" : "non è");
 				break;
 
 			case 6: // Trovare le stringhe che contengono una certa parola
@@ -117,30 +119,34 @@ void menu(char ***stringhe, size_t *dimensione)
 				printf("--> ");
 				scanf("%s", stringa);
 				puts("È stata trovata una corrispondenza in tali stringhe:");
-				ricerca_parola(*stringhe, *dimensione, stringa);
+				ricerca_parola(stringhe, *dimensione, stringa);
 				break;
 
 			case 7: // Stampare tutte le stringhe inserite
 				puts("\n\n\n| STRINGHE INSERITE |");
-				stampa_stringhe(*stringhe, *dimensione);
+				stampa_stringhe(stringhe, *dimensione);
 				break;
 		}
 	}
 	while(scelta > 0 && scelta < 8);
+
+	return stringhe;
 }
 
-void inserisci_stringa(char ***stringhe, size_t *dimensione)
+char** inserisci_stringa(char **stringhe, size_t *dimensione)
 {
 	/* Alloca la memoria necessaria per aggiungere una nuova stringa */
-	*stringhe = (char**)realloc(*stringhe, (*dimensione + 1) * sizeof(char*));
-	(*stringhe)[*dimensione] = (char*)malloc(100 * sizeof(char));
+	stringhe = (char**)realloc(stringhe, (*dimensione + 1) * sizeof(char*));
+	stringhe[*dimensione] = (char*)malloc(100 * sizeof(char));
 
 	/* Prende in input la stringa e la inserisce nell'array */
 	printf("Stringa N°%u --> ", *dimensione);
-	scanf("%s", (*stringhe)[*dimensione]);
+	scanf("%s", stringhe[*dimensione]);
 
 	/* Aggiorna il contatore nel numero delle stringhe all'intero dell'array */	
 	*dimensione = *dimensione + 1;
+
+	return stringhe;
 }
 
 char* max_stringa(char ** const stringhe, const size_t dimensione)
@@ -183,16 +189,18 @@ char* min_stringa(char ** const stringhe, const size_t dimensione)
 	return stringhe[index_min];
 }
 
-void cancella_stringa(char ***stringhe, size_t *dimensione, size_t posizione)
+char** cancella_stringa(char **stringhe, size_t *dimensione, size_t posizione)
 {
 	/* Trasla tutti gli elementi dopo posizione, verso sinista */
 	for(size_t i = posizione; i < *dimensione - 1; i++)
-		strcpy((*stringhe)[i], (*stringhe)[i+1]);
+		strcpy(stringhe[i], stringhe[i+1]);
 
 	/* Libera la memoria dell'ultimo elemento che non serve più */
-	free((*stringhe)[*dimensione - 1]);
-	*stringhe = (char**)realloc(*stringhe, (*dimensione - 1) * sizeof(char*));
-	*dimensione = *dimensione - 1; 
+	free(stringhe[*dimensione - 1]);
+	stringhe = (char**)realloc(stringhe, (*dimensione - 1) * sizeof(char*));
+	*dimensione = *dimensione - 1;
+
+	return stringhe;
 }
 
 int ricerca_stringa(char ** const stringhe, const size_t dimensione, const char *stringa)
