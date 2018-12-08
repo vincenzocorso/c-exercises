@@ -25,7 +25,7 @@ int main()
 void ordina(const int t, int vettore[], const unsigned int dimensione)
 {
 	int index;
-	for(unsigned int i = 0; i < dimensione; i++)
+	for(unsigned int i = 0; i < dimensione - 1; i++)
 	{
 		index = minmax(t, vettore, dimensione - 1 - i);
 		//printf("%d in index %d\n", vettore[index], dimensione - 1 - i);

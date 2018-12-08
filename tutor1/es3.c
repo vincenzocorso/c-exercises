@@ -52,7 +52,7 @@ char** inserisci_stringhe(char **stringhe, int *dimensione)
 void ordina_stringhe(char **stringhe, const unsigned int dimensione, const int t)
 {
 	int index;
-	for(unsigned int i = 0; i < dimensione; i++)
+	for(unsigned int i = 0; i < dimensione - 1; i++)
 	{
 		index = minmax(stringhe, dimensione - 1 - i, t);
 		swap(stringhe[index], stringhe[dimensione - 1 - i]);
