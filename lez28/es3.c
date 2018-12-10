@@ -42,13 +42,9 @@ int main()
 
 void scambia_righe(int **matrice, unsigned int riga1, unsigned int riga2)
 {
-	/*matrice[riga1] ^= matrice[riga2];
-	matrice[riga2] ^= matrice[riga2];
-	matrice[riga1] ^= matrice[riga2];*/
-
-	int *temp = matrice[riga1];
-	matrice[riga1] = matrice[riga2];
-	matrice[riga2] = temp;
+	matrice[riga1] = (int*)((int)matrice[riga1] ^ (int)matrice[riga2]);
+	matrice[riga2] = (int*)((int)matrice[riga1] ^ (int)matrice[riga2]);
+	matrice[riga1] = (int*)((int)matrice[riga1] ^ (int)matrice[riga2]);
 }
 
 void stampa_matrice(int **matrice, const unsigned int righe, const unsigned int colonne)
