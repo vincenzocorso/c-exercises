@@ -1,5 +1,6 @@
 # Ignora i file eseguibili
 *.exe
+*.out
 
 # Ignora i file object
 *.o
