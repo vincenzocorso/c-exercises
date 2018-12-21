@@ -35,12 +35,12 @@ int main()
 
 		/* Chiude il file */
 		fclose(fptr);
+
+		/* Stampa il vettore e libera la memoria */
+		stampa_vettore(vettore, dimensione);
+		free(vettore);
 	}
 	else puts("Impossibile aprire il file \"vettore.txt\".");
-
-	/* Stampa il vettore e libera la memoria */
-	stampa_vettore(vettore, dimensione);
-	free(vettore);
 
 	return 0;
 }
