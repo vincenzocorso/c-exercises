@@ -96,18 +96,21 @@ void sortarray(int *array, size_t size, size_t left, size_t right, int (*comp)(i
 	if(left == right)
 		return;
 
+	size_t middle1 = (left + right) / 2;
+	size_t middle2 = middle1 + 1;
+
 	if(optimised && right - left < 7)
 	{
-		insertionsort(array, left, right, comp);
+		insertionsort(array, left, middle1, comp);
+		insertionsort(array, middle2, right, comp);
 	}
 	else
 	{
-		size_t middle1 = (left + right) / 2;
-		size_t middle2 = middle1 + 1;
 		sortarray(array, size, left, middle1, comp);
 		sortarray(array, size, middle2, right, comp);
-		merge(array, size, left, middle1, middle2, right, comp);
 	}
+
+	merge(array, size, left, middle1, middle2, right, comp);
 }
 
 void merge(int *array, size_t size, size_t left, size_t middle1, size_t middle2, size_t right, int (*comp)(int a, int b))
