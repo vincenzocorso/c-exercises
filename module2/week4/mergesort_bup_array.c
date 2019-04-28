@@ -34,7 +34,7 @@ void print_array(int array[], size_t size)
 void mergesort(int array[], size_t size)
 {
 	for(int s = 1; s < size; s *= 2)
-		for(int j = 0; j < size; j += 2*s)
+		for(int j = 0; j < size - s; j += 2*s)
 			merge(array, size, j, j+s-1, j+s, min(j+2*s-1, size-1));
 }
 
