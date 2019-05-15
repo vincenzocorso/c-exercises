@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "bstitem.h"
 #include "bst.h"
+#include "queueitem.h"
+#include "queue.h"
 
 typedef struct bst_node
 {
@@ -10,9 +12,6 @@ typedef struct bst_node
 	struct bst_node *right;
 } bst_node;
 typedef struct bst_node *bst_node_ptr;
-
-#include "queueitem.h"
-#include "queue.h"
 
 bst_node_ptr bst_root;
 
