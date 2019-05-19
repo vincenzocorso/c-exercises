@@ -58,10 +58,9 @@ void plm_print(polynomial a)
 	{
 		if(a->coefficients[i])
 		{
-			printf("%.2f", a->coefficients[i]);
+			printf("%+.2f", a->coefficients[i]);
 			if(i >= 1) printf("x");
 			if(i > 1) printf("^%d", i);
-			if(i) printf("+");
 		}
 	}
 }
