@@ -52,6 +52,21 @@ polynomial plm_mul(polynomial a, polynomial b)
 	return c;
 }
 
+double plm_eval(polynomial a, double value)
+{
+	double total = 0;
+	for(int i = 0; i <= a->degree; i++)
+	{
+		int pow = 1;
+		for(int j = 1; j <= i; j++)
+			pow *= value;
+
+		total += a->coefficients[i] * pow;
+	}
+
+	return total;
+}
+
 void plm_print(polynomial a)
 {
 	for(int i = a->degree; i >= 0; i--)
