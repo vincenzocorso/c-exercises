@@ -5,17 +5,17 @@
 
 struct queue
 {
-	char filename[17];
+	char filename[50];
 	FILE *file;
 };
 
-queue queue_init()
+queue queue_init(int maxn)
 {
 	queue q = malloc(sizeof(struct queue));
 	if(q != NULL)
 	{
 		q->file = NULL;
-		sprintf(q->filename, "queue_%p", q);
+		sprintf(q->filename, "queue_%p.dat", q);
 	}
 	
 	return q;
