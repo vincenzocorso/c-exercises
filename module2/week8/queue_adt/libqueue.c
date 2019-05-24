@@ -16,7 +16,7 @@ struct queue
 	queue_node_ptr tail;
 };
 
-queue queue_init()
+queue queue_init(int maxn)
 {
 	queue q = malloc(sizeof(struct queue));
 	if(q != NULL)

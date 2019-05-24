@@ -10,7 +10,7 @@ int main()
 
 	queue queues[10];
 	for(int i = 0; i < 10; i++)
-		queues[i] = queue_init();
+		queues[i] = queue_init(4);
 	
 	for(int i = 1; i <= 100; i++)
 		queue_enqueue(queues[rand() % 10], i);
@@ -22,7 +22,7 @@ int main()
 		queue_free(queues[i]);
 
 	puts("\n");
-	queue q = queue_init();
+	queue q = queue_init(4);
 	for(int i = 0; i < 10; i++)
 		queue_enqueue(q, i);
 	

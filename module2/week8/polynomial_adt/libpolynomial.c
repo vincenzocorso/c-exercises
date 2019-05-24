@@ -69,7 +69,7 @@ double plm_eval(polynomial a, double value)
 
 void plm_print(polynomial a)
 {
-	for(int i = a->degree; i >= 0; i--)
+	for(int i = 0; i <= a->degree; i++)
 	{
 		if(a->coefficients[i])
 		{
@@ -78,6 +78,12 @@ void plm_print(polynomial a)
 			if(i > 1) printf("^%d", i);
 		}
 	}
+}
+
+void plm_print_coefficients(polynomial a)
+{
+	for(int i = 0; i <= a->degree; i++)
+		printf("%.2f ", a->coefficients[i]);
 }
 
 void plm_free(polynomial a)

@@ -5,7 +5,7 @@
 
 typedef struct queue *queue; // handle
 
-queue queue_init();
+queue queue_init(int);
 int is_queue_empty(queue);
 void queue_enqueue(queue, queueitem);
 queueitem queue_dequeue(queue);

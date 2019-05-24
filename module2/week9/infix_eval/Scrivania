@@ -1,0 +1,531 @@
+       options may not be grouped: -dv is very different from -d -v.
+           -fargs-in-order=n  -fcheck-new -fconstexpr-depth=n
+           -fno-optional-diags  -fpermissive -fno-pretty-templates -frepo
+           -fno-rtti  -fsized-deallocation -ftemplate-backtrace-limit=n
+           -ftemplate-depth=n -fno-threadsafe-statics  -fuse-cxa-atexit
+           -Wconversion-null  -Wctor-dtor-privacy -Wdelete-non-virtual-dtor
+           -Wnoexcept  -Wnoexcept-type  -Wnon-virtual-dtor  -Wreorder
+           -fobjc-direct-dispatch -fobjc-exceptions -fobjc-gc -fobjc-nilcheck
+           -freplace-objc-classes -fzero-link -gen-decls -Wassign-intercept
+           -fno-diagnostics-show-option  -fno-diagnostics-show-caret
+           -Wbool-operation -Wno-builtin-declaration-mismatch
+           -Wno-deprecated  -Wno-deprecated-declarations  -Wno-designated-init
+           -Wdisabled-optimization -Wno-discarded-qualifiers
+           -Wno-discarded-array-qualifiers -Wno-div-by-zero
+           -Wexpansion-to-defined -Werror  -Werror=*  -Wfatal-errors
+           -Wimplicit-function-declaration  -Wimplicit-int -Winit-self
+           -Wmissing-field-initializers  -Wmissing-include-dirs -Wno-multichar
+           -Wnull-dereference  -Wodr  -Wno-overflow  -Wopenmp-simd
+           -Wno-pragmas  -Wredundant-decls  -Wrestrict  -Wno-return-local-addr
+           -Wswitch-bool  -Wswitch-default  -Wswitch-enum -Wswitch-unreachable
+           -Wbad-function-cast  -Wmissing-declarations
+           -Wold-style-declaration  -Wold-style-definition -Wstrict-prototypes
+           -gstrict-dwarf  -gno-strict-dwarf -gcolumn-info  -gno-column-info
+           -fdebug-types-section -feliminate-dwarf2-dups
+           -fno-eliminate-unused-debug-types -femit-struct-debug-baseonly
+           -femit-struct-debug-reduced -femit-struct-debug-detailed[=spec-
+           list] -feliminate-unused-debug-symbols  -femit-class-debug-always
+           -fno-merge-debug-strings  -fno-dwarf2-cfi-asm -fvar-tracking
+           -fauto-inc-dec  -fbranch-probabilities
+           -fisolate-erroneous-paths-dereference
+           -fmove-loop-invariants  -fno-branch-count-reg -fno-defer-pop
+           -fsched-spec-load-dangerous -fsched-stalled-insns-dep[=n]
+           -fsched-dep-count-heuristic -fschedule-fusion -fschedule-insns
+           -fthread-jumps  -ftracer  -ftree-bit-ccp -ftree-builtin-call-dce
+           -ftree-dce  -ftree-dominator-opts -ftree-dse  -ftree-forwprop
+           -ftree-phiprop  -ftree-loop-distribution
+           -ftree-loop-distribute-patterns -ftree-loop-ivcanon
+           -fprofile-dir=path  -fprofile-generate  -fprofile-generate=path
+           -fchkp-treat-zero-dynamic-size-as-infinite  -fchkp-check-read
+           -fvtv-counts  -fvtv-debug -finstrument-functions
+           -Aquestion=answer -A-question[=answer] -C  -CC  -Dmacro[=defn] -dD
+           -dI  -dM  -dN  -dU -fdebug-cpp  -fdirectives-only
+           -fno-canonical-system-headers -fpch-deps  -fpch-preprocess
+           -fwide-exec-charset=charset  -fworking-directory -H  -imacros file
+           -fnon-call-exceptions  -fdelete-dead-exceptions  -funwind-tables
+           -finhibit-size-directive  -fno-common  -fno-ident
+           -dletters  -dumpspecs  -dumpmachine  -dumpversion -dumpfullversion
+           -fcompare-debug[=opts]  -fcompare-debug-second -fenable-kind-pass
+           -fsched-verbose=n -fsel-sched-verbose  -fsel-sched-dump-cfg
+           -ftime-report  -ftime-report-details
+           -print-multi-directory  -print-multi-lib  -print-multi-os-directory
+           -print-prog-name=program  -print-search-dirs  -Q -print-sysroot
+           -mno-omit-leaf-frame-pointer -mtls-dialect=desc
+           -mtls-dialect=traditional -mtls-size=size -mfix-cortex-a53-835769
+           -mno-low-precision-sqrt -mlow-precision-div  -mno-low-precision-div
+           -mvect-double  -max-vect-align=num -msplit-vecmove-early
+           -mARC700 -mdpfp  -mdpfp-compact  -mdpfp-fast  -mno-dpfp-lrsr -mea
+           -mdsp-packa  -mdvbf  -mlock  -mmac-d16  -mmac-24  -mrtsc  -mswape
+           -mcode-density  -mll64  -mfpu=fpu
+           -mpic-register=reg -mnop-fun-dllimport -mpoke-function-name -mthumb
+           -mcallee-super-interworking -mtp=name  -mtls-dialect=dialect
+           -mneon-for-64bits -mslow-flash-data -masm-syntax-unified
+           -mleaf-id-shared-library  -mno-leaf-id-shared-library -msep-data
+           -mno-sep-data  -mlong-calls  -mno-long-calls -mfast-fp
+           -current_version -dead_strip -dependency-file  -dylib_file
+           -dylinker_install_name -dynamic  -dynamiclib
+           -mfloat-vax  -mfloat-ieee -mexplicit-relocs  -msmall-data
+           -mlarge-data -msmall-text  -mlarge-text -mmemory-latency=time
+           -msoft-float -malloc-cc  -mfixed-cc  -mdword  -mno-dword -mdouble
+           -mno-double -mmedia  -mno-media  -mmuladd  -mno-muladd -mfdpic
+           -mgnu-ld   -mhp-ld -mfixed-range=register-range -mjump-in-delay
+           -mlinker-opt  -mlong-calls -mlong-load-store  -mno-disable-fpregs
+           -mno-disable-indexing  -mno-fast-indirect-calls  -mno-gas
+           -mno-jump-in-delay  -mno-long-load-store -mno-portable-runtime
+           -minline-float-divide-min-latency
+           -minline-float-divide-max-throughput -mno-inline-float-divide
+           -minline-int-divide-min-latency -minline-int-divide-max-throughput
+           -mno-inline-int-divide -minline-sqrt-min-latency
+           -mtune=cpu-type  -milp32  -mlp64 -msched-br-data-spec
+           -msched-ar-data-spec  -msched-control-spec -msched-br-in-data-spec
+           -msched-ar-in-data-spec  -msched-in-control-spec -msched-spec-ldc
+           -msched-spec-control-ldc -msched-prefer-non-data-spec-insns
+           -msel-sched-dont-check-control-spec  -msched-fp-mem-deps-zero-cost
+           -mc68000  -mc68020 -mnobitfield  -mrtd  -mno-rtd  -mdiv  -mno-div
+           -malign-int  -mstrict-align  -msep-data  -mno-sep-data
+           MCore Options -mhardlit  -mno-hardlit  -mdiv  -mno-div
+           -mcallgraph-data -mno-callgraph-data  -mslow-bytes  -mno-slow-bytes
+           MicroBlaze Options -msoft-float  -mhard-float  -msmall-divides
+           -mcpu=cpu -mmemcpy  -mxl-soft-mul  -mxl-soft-div  -mxl-barrel-shift
+           -mnan=encoding -mdsp  -mno-dsp  -mdspr2  -mno-dspr2 -mmcu
+           -mgpopt  -mno-gopt -membedded-data  -mno-embedded-data
+           -mexplicit-relocs  -mno-explicit-relocs -mcheck-zero-division
+           -mno-check-zero-division -mdivide-traps  -mdivide-breaks
+           -mam33-2  -mam34 -mtune=cpu-type -mreturn-pointer-on-d0 -mno-crt0
+           -mcache-block-size=num -march=arch -mcmodel=code-model -mctor-dtor
+           -mcache-volatile -mno-fast-sw-div  -mfast-sw-div -mhw-mul
+           -mno-hw-mul  -mhw-mulx  -mno-hw-mulx  -mno-hw-div  -mhw-div
+           -mabi=ABI-string -mfdiv  -mno-fdiv -mdiv  -mno-div -march=ISA-
+           string -mtune=processor-string -msmall-data-limit=N-bytes
+           -m64bit-doubles  -m32bit-doubles  -msave-mduc-in-interrupts
+           -mmfpgpr  -mno-mfpgpr  -mhard-dfp  -mno-hard-dfp -mfull-toc
+           -msched-costly-dep=dependence_type -minsert-sched-nops=scheme
+           -mmulhw  -mno-mulhw -mdlmzb  -mno-dlmzb -mfloat-gprs=yes
+           -mno-crypto  -mhtm  -mno-htm  -mdirect-move  -mno-direct-move
+           -mupper-regs-df  -mno-upper-regs-df  -mupper-regs-sf
+           -mno-upper-regs-sf -mupper-regs-di  -mno-upper-regs-di -mupper-regs
+           RX Options -m64bit-doubles  -m32bit-doubles  -fpu  -nofpu -mcpu=
+           -mbig-endian-data  -mlittle-endian-data -msmall-data -msim
+           -mhard-float  -msoft-float  -mhard-dfp  -mno-hard-dfp
+           -mlong-double-64  -mlong-double-128 -mbackchain  -mno-backchain
+           -mmvcle  -mno-mvcle -m64  -m31  -mdebug  -mno-debug  -mesa  -mzarch
+           -mno-fused-madd -mwarn-framesize  -mwarn-dynamicstack  -mstack-size
+           -mno-zdcbranch -mcbranch-force-delay-slot -mfused-madd
+           -mno-std-struct-return -munaligned-doubles  -mno-unaligned-doubles
+           SPU Options -mwarn-reloc  -merror-reloc -msafe-dma  -munsafe-dma
+           -mno-disable-callt -mv850e2v3  -mv850e2  -mv850e1  -mv850es -mv850e
+           list  -mdump-tune-features  -mno-default -mfpmath=unit
+           -malign-double -mpreferred-stack-boundary=num
+           -minline-all-stringops -minline-stringops-dynamically
+           -m128bit-long-double -m96bit-long-double  -mlong-double-64
+           -mlong-double-80  -mlong-double-128 -mregparm=num  -msseregparm
+           -mno-tls-direct-seg-refs -mcmodel=code-model  -mabi=name
+           -mlarge-data-threshold=num -msse2avx  -mfentry  -mrecord-mcount
+           -mavx256-split-unaligned-store -malign-data=type
+           -mnop-fun-dllimport  -mthread -municode  -mwin32  -mwindows
+       -fopenacc-dim=geom
+       -fconstexpr-depth=n
+       -fno-optional-diags
+       -fsized-deallocation
+           as introduced in C++14.  This is useful for user-defined
+           under -std=c++14 and above.  The flag -Wsized-deallocation warns
+       -ftemplate-depth=n
+       -Wctor-dtor-privacy (C++ and Objective-C++ only)
+       -Wdelete-non-virtual-dtor (C++ and Objective-C++ only)
+           Additionally, warn when a user-defined literal operator is declared
+       -Wnon-virtual-dtor (C++ and Objective-C++ only)
+           Accept imaginary, fixed-point, or machine-defined literal number
+           suffixes are treated as C++11 user-defined literal numeric
+           This option also enables -Wnon-virtual-dtor, which is also one of
+       -fobjc-direct-dispatch
+       -gen-decls
+       -fno-diagnostics-color
+           -fno-diagnostics-color are aliases for -fdiagnostics-color=always
+                   quote=01:fixit-insert=32:fixit-delete=31:\
+                   diff-filename=01:diff-hunk=32:diff-delete=31:diff-insert=32
+           "fixit-delete="
+           "diff-delete="
+       -fno-diagnostics-show-option
+           -fno-diagnostics-show-option flag suppresses that behavior.
+       -fno-diagnostics-show-caret
+           -fno-diagnostics-show-option flag.)
+           -Wcomment -Wduplicate-decl-specifier (C and Objective-C only)
+           -Wimplicit-function-declaration (C and Objective-C only)
+           -Wmissing-parameter-type (C only) -Wold-style-declaration (C only)
+       -Wduplicate-decl-specifier (C and Objective-C only)
+               that may yield only a two-digit year.
+       -Wnull-dereference
+       -Wimplicit-function-declaration (C and Objective-C only)
+           Same as -Wimplicit-int and -Wimplicit-function-declaration.  This
+       -Wmissing-include-dirs (C, C++, Objective-C and Objective-C++ only)
+       -Wswitch-default
+       -Wno-discarded-qualifiers (C and Objective-C only)
+       -Wno-discarded-array-qualifiers (C and Objective-C only)
+       -Wno-div-by-zero
+       -Wexpansion-to-defined
+       -Wsized-deallocation (C++ and Objective-C++ only)
+           or vice versa.  Enabled by -Wextra along with -fsized-deallocation.
+       -Wno-builtin-declaration-mismatch
+       -Wold-style-declaration (C and Objective-C only)
+       -Wold-style-definition (C and Objective-C only)
+           -Wmissing-declarations to detect missing declarations in C++.
+       -Wmissing-declarations
+           implementation-defined values, and should not be used in portable
+       -Wno-deprecated
+       -Wno-deprecated-declarations
+       -Wredundant-decls
+       -Wno-designated-init (C and Objective-C only)
+           other DWARF-related options (including -feliminate-dwarf2-dups and
+           -fno-dwarf2-cfi-asm) retain a reference to DWARF Version 2 in their
+       -feliminate-unused-debug-symbols
+       -femit-class-debug-always
+       -fno-merge-debug-strings
+       -gsplit-dwarf
+       -gstrict-dwarf
+       -gno-strict-dwarf
+       -feliminate-dwarf2-dups
+       -femit-struct-debug-baseonly
+           to the debugger.  See -femit-struct-debug-reduced for a less
+           aggressive option.  See -femit-struct-debug-detailed for more
+       -femit-struct-debug-reduced
+           debugger.  See -femit-struct-debug-baseonly for a more aggressive
+           option.  See -femit-struct-debug-detailed for more detailed
+       -femit-struct-debug-detailed[=spec-list]
+           This option is a detailed version of -femit-struct-debug-reduced
+           and -femit-struct-debug-baseonly, which serves for most needs.
+           -femit-struct-debug-detailed does not yet implement them.
+           The default is -femit-struct-debug-detailed=all.
+       -fno-dwarf2-cfi-asm
+       -fno-eliminate-unused-debug-types
+           -fauto-inc-dec -fbranch-count-reg -fcombine-stack-adjustments
+           -ftree-coalesce-vars -ftree-copy-prop -ftree-dce
+           -ftree-dominator-opts -ftree-dse -ftree-forwprop -ftree-fre
+           -fipa-icf -fisolate-erroneous-paths-dereference -flra-remat
+           -fstrict-aliasing -fstrict-overflow -ftree-builtin-call-dce
+           -ftree-loop-distribute-patterns, -fsplit-paths
+           of choice for the standard edit-compile-debug cycle, offering a
+       -fno-defer-pop
+           machine-description macro "FRAME_POINTER_REQUIRED" controls whether
+       -fno-keep-inline-dllexport
+           moves allowed.  By setting this flag certain anti-dependences edges
+       -fauto-inc-dec
+       -fdeclone-ctor-dtor
+           Use -fno-delete-null-pointer-checks to disable this optimization
+       -fno-lifetime-dse
+           as dead after the destructor you, can use -flifetime-dse=1.  The
+           default behavior can be explicitly selected with -flifetime-dse=2.
+           -flifetime-dse=0 is equivalent to -fno-lifetime-dse.
+       -fsched-spec-load-dangerous
+       -fsched-stalled-insns-dep
+       -fsched-stalled-insns-dep=n
+           -fno-sched-stalled-insns-dep is equivalent to
+           -fsched-stalled-insns-dep=0.  -fsched-stalled-insns-dep without a
+           value is equivalent to -fsched-stalled-insns-dep=1.
+       -fsched-dep-count-heuristic
+       -fisolate-erroneous-paths-dereference
+       -ftree-dce
+       -ftree-builtin-call-dce
+       -ftree-dominator-opts
+       -ftree-dse
+       -ftree-loop-distribution
+       -ftree-loop-distribute-patterns
+           user-defined section attribute and on any architecture that does
+           If n is not specified or is zero, use a machine-dependent default.
+           If n is not specified or is zero, use a machine-dependent default
+           If n is not specified or is zero, use a machine-dependent default.
+           If n is not specified or is zero, use a machine-dependent default.
+           Enable profile feedback-directed optimizations, and the following
+           feedback data files. See -fprofile-dir.
+           Enable sampling-based feedback-directed optimizations, and the
+           -ftree-loop-distribute-patterns.
+           be executed with a non-default rounding mode.  This option disables
+           transformations that are unsafe in the presence of sign-dependent
+           max-goto-duplication-insns
+           max-delay-slot-insn-search
+           max-delay-slot-live-search
+           max-inline-recursive-depth
+           max-inline-recursive-depth-auto
+               --param max-inline-recursive-depth applies to functions
+               is enabled; --param max-inline-recursive-depth-auto applies
+           gcse-cost-distance-ratio
+           max-hoist-depth
+           max-completely-peel-loop-nest-depth
+           tracer-dynamic-coverage
+           tracer-dynamic-coverage-feedback
+               The tracer-dynamic-coverage-feedback parameter is used only
+               Similarly to tracer-dynamic-coverage two parameters are
+           max-sched-insn-conflict-delay
+           sched-mem-true-dep-cost
+           max-jump-thread-duplication-stmts
+           loop-max-datarefs-for-datadeps
+           max-vartrack-expr-depth
+           loop-unroll-jam-depth
+           cxx-max-namespaces-for-diagnostic-help
+           allow-store-data-races
+           use-after-scope-direct-emission-threshold
+           max-ssa-name-query-depth
+               corresponds to following a use-def chain.
+           hsa-gen-debug-stores
+               hsa-gen-debug-stores=1 to enable it.
+           max-speculative-devirt-maydefs
+               The maximum number of may-defs we analyze when looking for a
+               must-def specifying the dynamic type of an object that invokes
+           profile-directed optimizations (-fbranch-probabilities), or for
+           *   For profile-directed optimizations, compile the source files
+       -fprofile-dir=path
+           feedback data files. See -fprofile-dir.
+           -fsanitize=integer-divide-by-zero
+           -fsanitize=float-divide-by-zero
+               options, -fsanitize=float-divide-by-zero is not enabled by
+           Sanitize global variables in selected user-defined sections.  si
+           -fsanitize=float-divide-by-zero, -fsanitize=bounds-strict,
+                   undefined,float-cast-overflow,float-divide-by-zero,bounds-strict
+       -fchkp-treat-zero-dynamic-size-as-infinite
+           -Wl,--defsym,__stack_limit=0x7ffe0000 to enforce a stack limit of
+       -fvtv-debug
+           as -dM.  To avoid mixing such debug output with the dependency
+           performed.  In addition, the -dD option is implicitly enabled.
+       -fpch-deps
+       -fworking-directory
+           the negated form -fno-working-directory.  If the -P flag is present
+       -dletters
+           -dM Instead of the normal output, generate a list of #define
+                       touch foo.h; cpp -dM foo.h
+               If you use -dM without the -E option, -dM is interpreted as a
+           -dD Like -dM except in two respects: it does not include the
+           -dN Like -dD, but emit only the macro names, not their expansions.
+           -dI Output #include directives in addition to the result of
+           -dU Like -dD except that only macros that are expanded, or whose
+           Pass the flag -export-dynamic to the ELF linker, on targets that
+       -fdelete-dead-exceptions
+           switch.  Use it to conform to a non-default application binary
+           switch.  Use it to conform to a non-default application binary
+           Use it to conform to a non-default application binary interface.
+           Use it to conform to a non-default application binary interface.
+           the linker so you get a multiple-definition error if the same
+       -finhibit-size-directive
+           In position-dependent code, a few targets also convert calls to
+           non-default application binary interface.
+           switch.  Use it to conform to a non-default application binary
+           argument should be one of global-dynamic, local-dynamic, initial-
+           is global-dynamic.
+           self-documentation of the code.  Note that due to ISO C++
+       -dletters
+           Some -dletters switches have different meaning when -E is used for
+           Debug dumps can be enabled with a -fdump-rtl switch or some -d
+               Dump after auto-inc-dec discovery.  This pass is only run on
+           -fdump-rtl-dce
+           -fdump-rtl-dbr
+           -fdump-rtl-dce1
+           -fdump-rtl-dce2
+               -fdump-rtl-dce1 and -fdump-rtl-dce2 enable dumping after the
+           -fdump-rtl-dfinit
+           -fdump-rtl-dfinish
+           -da
+           -dA Annotate the assembler output with miscellaneous debugging
+           -dD Dump all macro definitions, at the end of preprocessing, in
+           -dH Produce a core dump whenever an error occurs.
+           -dp Annotate the assembler output with a comment indicating which
+           -dP Dump the RTL in the assembler output as a comment before each
+               instruction.  Also turns on -dp annotation.
+           -dx Just generate RTL for a function instead of compiling it.
+           When doing debugging dumps (see -d option above), suppress
+           while -details dumps every event as the passes generate them.  The
+       -fcompare-debug[=opts]
+           time, adding opts and -fcompare-debug-second to the arguments
+           and nonzero, implicitly enables -fcompare-debug.  If
+           -fcompare-debug=, with the equal sign but without opts, is
+           equivalent to -fno-compare-debug, which disables the dumping of the
+           To verify full coverage during -fcompare-debug testing, set
+           GCC_COMPARE_DEBUG to say -fcompare-debug-not-overridden, which GCC
+           setting GCC_COMPARE_DEBUG to -w%n-fcompare-debug not overridden
+       -fcompare-debug-second
+           compilation requested by -fcompare-debug, along with options to
+           used with -fcompare-debug.
+       -ftime-report-details
+       -print-multi-directory
+       -print-multi-os-directory
+       -print-search-dirs
+       -dumpmachine
+       -dumpversion
+       -dumpfullversion
+       -dumpspecs
+       -mtls-dialect=desc
+       -mtls-dialect=traditional
+       -mlow-precision-div
+       -mno-low-precision-div
+       -mnovect-double
+           -mvect-double, which uses DImode as preferred SIMD mode.
+       -mno-dpfp-lrsr
+       -mcode-density
+       -mmac-d16
+           Replaced by -mmac-d16.
+           -march=native causes the compiler to auto-detect the architecture
+           auto-detect is unsuccessful the option has no effect.
+           -mtune=native causes the compiler to auto-detect the CPU of the
+           -mcpu=native causes the compiler to auto-detect the CPU of the
+           vfpv3-fp16, vfpv3-d16, vfpv3-d16-fp16, vfpv3xd, vfpv3xd-fp16,
+           neon-vfpv3, neon-fp16, vfpv4, vfpv4-d16, fpv4-sp-d16, neon-vfpv4,
+           fpv5-d16, fpv5-sp-d16, fp-armv8, neon-fp-armv8 and
+       -mpic-data-is-text-relative
+       -mtls-dialect=dialect
+       -mslow-flash-data
+           and the application be linked with -Wl,--defsym,func_4=0x4.
+       -msep-data
+       -mno-sep-data
+       -mno-data-align
+           debugging format, this enables -feliminate-unused-debug-symbols.
+           to conform to a non-default data model.
+       -findirect-data
+           programs.  -findirect-data and -ffix-and-continue are provided for
+       -dynamiclib
+       -dead_strip
+       -dependency-file
+       -dylib_file
+       -dylinker_install_name
+       -dynamic
+       -msmall-data
+       -mlarge-data
+           gp-relative relocations.  When -msmall-data is used, objects 8
+           The default is -mlarge-data.  With this option the data area is
+           -msmall-data and -fPIC implies -mlarge-data.
+           reachable with a branch instruction.  When -msmall-data is used,
+       -mno-dword
+       -mno-double
+       -mjump-in-delay
+           symbol-difference or pc-relative calls should be relatively small.
+       -minline-float-divide-min-latency
+       -minline-float-divide-max-throughput
+       -mno-inline-float-divide
+       -minline-int-divide-min-latency
+       -minline-int-divide-max-throughput
+       -mno-inline-int-divide
+       -mno-dwarf2-asm
+       -mno-sched-br-data-spec
+       -msched-br-data-spec
+       -msched-ar-data-spec
+       -mno-sched-ar-data-spec
+       -msched-br-in-data-spec
+       -mno-sched-br-in-data-spec
+           effective only with -msched-br-data-spec enabled.  The default
+       -msched-ar-in-data-spec
+       -mno-sched-ar-in-data-spec
+           effective only with -msched-ar-data-spec enabled.  The default
+       -mno-sched-prefer-non-data-spec-insns
+       -msched-prefer-non-data-spec-insns
+       -msched-fp-mem-deps-zero-cost
+       -msel-sched-dont-check-control-spec
+           Enable user-defined instructions.
+       -mno-div
+       -msep-data
+       -mno-sep-data
+       -mno-div
+       -mcallgraph-data
+       -mno-callgraph-data
+       -mxl-soft-div
+       -msmall-divides
+       -mno-dsp
+       -mno-dspr2
+           Assume (do not assume) that externally-defined data is in a small
+           stop the library from making assumptions about externally-defined
+       -membedded-data
+       -mno-embedded-data
+           This option is only meaningful in conjunction with -membedded-data.
+       -mcheck-zero-division
+       -mno-check-zero-division
+           The default is -mcheck-zero-division.
+           at configure time using --with-divide=breaks.  Divide-by-zero
+           checks can be completely disabled using -mno-check-zero-division.
+       -mreturn-pointer-on-d0
+           default; use -mno-return-pointer-on-d0 to disable it.
+       -mctor-dtor
+       -mno-fast-sw-div
+       -mfast-sw-div
+       -mno-hw-div
+       -mhw-div
+       -mno-div
+       -msmall-data-limit=n
+       -m64bit-doubles
+       -m32bit-doubles
+           Make the "double" data type be 64 bits (-m64bit-doubles) or 32 bits
+           (-m32bit-doubles) in size.  The default is -m32bit-doubles.
+       -mhard-dfp
+       -mno-hard-dfp
+           The -mhard-dfp option allows GCC to generate the decimal floating-
+       -mno-direct-move
+       -mupper-regs-di
+       -mno-upper-regs-di
+           when processing integers.  -mupper-regs-di is turned on by default
+       -mupper-regs-df
+       -mno-upper-regs-df
+           PowerPC ISA.  -mupper-regs-df is turned on by default if you use
+           -mupper-regs-sf and -mupper-regs-df options.
+           -malign-natural overrides the ABI-defined alignment of larger
+           default if hardware floating point is used.  The machine-dependent
+       -mno-dlmzb
+       -msched-costly-dep=dependence_type
+       -m64bit-doubles
+       -m32bit-doubles
+           Make the "double" data type be 64 bits (-m64bit-doubles) or 32 bits
+           (-m32bit-doubles) in size.  The default is -m32bit-doubles.  Note
+           why the default is -m32bit-doubles.
+           if the -m64bit-doubles option is used.
+       -mbig-endian-data
+       -mlittle-endian-data
+           -mlittle-endian-data, i.e. to store data in the little-endian
+       -msmall-data-limit=N
+           depends upon whether the -msmall-data-limit and/or the
+           finally -msmall-data-limit.  Thus it is possible for the small data
+       -mhard-dfp
+       -mno-hard-dfp
+           for decimal-floating-point operations.  When -mno-hard-dfp is
+           floating-point operations.  When -mhard-dfp is specified, the
+       -mlong-double-64
+       -mlong-double-128
+       -mno-debug
+       -mwarn-dynamicstack
+           Generate code for the SH4al-dsp, or for a SH4a in such a way that
+           Same as -m4a-nofpu, except that it implicitly passes -dsp to the
+           call-div1
+               FPU defaults to "call-div1".
+               instructions defaults to "call-div1".
+       -mcbranch-force-delay-slot
+           default if hardware floating point is used.  The machine-dependent
+           Prefer zero-displacement conditional branches for conditional move
+           this option, you can link position-dependent code into a shared
+       -mno-unaligned-doubles
+       -munaligned-doubles
+           With -munaligned-doubles, GCC assumes that doubles have 8-byte
+       -msafe-dma
+       -munsafe-dma
+           being accessed.  With -munsafe-dma you must use the "volatile"
+           Rather than mark the memory as volatile, you can use -msafe-dma to
+           -mno-dual-nops.  Disabled with -Os.
+       -mhint-max-distance=n
+       -mno-disable-callt
+               The -mno-disable-callt command-line option is not supported.
+       -malign-double
+       -mno-align-double
+           On x86-64, -malign-double is enabled by default.
+           Warning: if you use the -malign-double switch, structures
+       -m96bit-long-double
+       -m128bit-long-double
+           -m96bit-long-double is the default in 32-bit mode.
+           -m128bit-long-double aligns "long double" to a 16-byte boundary by
+           In the x86-64 compiler, -m128bit-long-double is the default choice
+       -mlong-double-64
+       -mlong-double-80
+       -mlong-double-128
+       -malign-data=type
+       -mlarge-data-threshold=threshold
+           should be aligned to an 8-byte boundary (see -malign-double) or
+       -mno-default
+           vec-div
+       -mtls-dialect=type
+       -minline-stringops-dynamically
+       -mtls-direct-seg-refs
+       -mno-tls-direct-seg-refs
+           there.  Symbols with sizes larger than -mlarge-data-threshold are
+       -mnop-fun-dllimport
+           specifies that relocated-data in read-only section is put into the
+           -fcompare-debug to the compiler driver.  See the documentation of
